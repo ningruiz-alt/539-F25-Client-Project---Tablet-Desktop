@@ -1,0 +1,260 @@
+/*****************************************************************************
+*    Title: Stylestage source code
+*    Author:  Stephanie Eckles
+*    Date: 2013
+*    Code version: 2.0
+*    Availability: https://stylestage.dev/styles/fresh/#guidelines
+I wrote this css file after looking at the  page on stylestage: https://stylestage.dev/styles/fresh/#guidelines.
+****************************************************************************/
+
+:root{
+  --um-blue: #00274C;     
+  --um-maize: #FFCB05;    
+  --text: #121212;              
+  --color-background: #f9f9f9;
+  --color-text: black;
+  --hyperlink-color: #CFC096;
+  --ross-orange: #D86018; 
+  --font-family: "Montserrat";
+  --font-weight-strong: 500;
+  --font-size-h1: 2.5rem;
+  --font-size-h2: 2rem;
+  --font-size-h3: 1.75rem;
+  --font-size-h4: 1.35rem;
+  --font-size-text: 1.15rem;
+  --border-radius: 1rem;
+  /* # Stephanie Eckles suggested these two variables for the header logo */
+  --logomark-height: 3em;
+  --logomark-padding: 0 1em;
+}
+
+
+.skip-to-main {
+  position: absolute;
+  left: -999px;
+  top: 0;
+  background: #00274C;
+  color: #FFCB05;
+  padding: 0.5em 0.5em;
+  border: 2px dashed white;
+}
+
+.skip-to-main:focus,
+.skip-to-main:focus-visible {
+  left:1rem;
+  top:1rem;
+}
+
+
+header{
+  display: grid;
+  grid-template-columns: auto 1fr;       
+  background:var(--um-blue); 
+  color: var(--um-maize);
+}
+
+header h1 {
+  display: inline-grid;
+  min-height: var(--logomark-height);
+  place-content: center;
+  grid-column: 2;        
+  grid-row: 1;           
+  margin: 0;
+}
+
+header img{
+  height: clamp(2.2rem, 6vw, 3.2rem);          
+  display:block;
+}
+
+nav{ 
+  grid-area:nav; 
+  grid-column: 1 / -1;  
+  grid-row: 2;      
+}
+
+nav ul{
+  margin: 0;
+  padding: 0.5rem; 
+  display: grid;
+  grid-template-columns: 1fr 1fr;               
+  gap: clamp(0.4rem, 1vw, 0.8rem);
+  justify-content: center;
+  list-style:none;
+}
+
+nav ul a{
+  display:block;
+  text-align:center;
+  padding: 0.5rem;
+  background:rgba(11, 82, 129, 0.14);
+  color:white;
+  font-size: 1.25rem;
+  border-radius: var(--border-radius);
+}
+
+nav ul li {
+  margin: 0.25rem;
+}
+
+body {
+  background-color: var(--color-background);
+  color: var(--color-text);
+  font-family: var(--font-family);
+  font-size: 100%;
+  line-height: 1.5;
+}
+
+ul {
+    display: block;
+    list-style-type: disc;
+    margin-block-start: 1em;
+    margin-block-end: 1em;
+    padding-inline-start: 40px;
+    unicode-bidi: isolate;
+}
+
+/* # Stephanie Eckles suggested using flexbox for article sections */
+article section {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  padding-top: 1vh;
+  padding-bottom: 5vh;
+}
+
+article .container,
+.page-footer .container,
+#styles .container {
+  width: 100%;
+  max-width: 80ch;
+  margin-right: auto;
+  margin-left: auto;
+}
+
+article,
+#styles {
+  padding: 1rem;
+}
+/* # Stephanie Eckles suggested using flexbox for article sections ends */
+
+/* # Stephanie Eckles suggested these heading styles but I also made changes myself to suit my website design */
+h1,
+h2,
+h3,
+h4 {
+  font-weight: var(--font-weight-strong);
+  line-height: 1;
+  margin-bottom: 0.5em;
+}
+
+h1 {
+  font-size: var(--font-size-h1);
+  text-align: center;
+  margin-left: 0.25em;
+  margin-left: 0.25em;
+}
+
+h2 {
+  font-size: var(--font-size-h2);
+  text-align: center;
+}
+
+#main h2 {
+  background-color: var(--um-maize);
+  align-self: center;
+  color: var(--um-blue);
+  padding: 0.25em 0.5em;
+}
+
+h3 {
+  font-size: var(--font-size-h3);
+  text-align: center;
+}
+
+h4 {
+  font-size: var(--font-size-h4);
+}
+
+p {
+  font-size: var(--font-size-text);
+  margin-bottom: 1.25em;
+}
+
+img {
+  max-inline-size: 100%;  
+  block-size: auto;        
+  height: auto;            
+  display: block;          
+}
+
+iframe{
+  max-inline-size: 100%;  
+  aspect-ratio:16/9;
+  block-size: auto;        
+  height: auto;            
+  display: block;          
+}
+
+/* # Stephanie Eckles suggested these list styles */
+ol {
+    display: block;
+    list-style-type: decimal;
+    margin-block-start: 1em;
+    margin-block-end: 1em;
+    padding-inline-start: 40px;
+    unicode-bidi: isolate;
+}
+/* # Stephanie Eckles suggested these list styles ends*/
+
+.options{
+  display:grid;
+  grid-template-columns: auto auto;
+  padding:0.5em;
+}
+.options a{
+  place-items: center;
+  border: var(--ross-orange) 2px solid;
+  margin: 0.5em;
+  padding: 0.5em;
+  justify-content: center;
+  text-align:center;
+  font-size: 1.25rem
+}
+.options li{
+  display: contents;
+}
+
+.resource-section{
+  background:white; 
+  padding: 1rem;
+  margin: 1rem 0;
+}
+
+.resource-grid{
+  display:grid;
+  grid-template-columns:repeat(2,1fr);
+  gap:1rem;
+  list-style: none;
+  padding: 0;
+}
+
+.resource-card{
+  border:1px solid;
+  padding: 1rem;
+  margin-bottom: 1rem;
+}
+
+.page-footer{
+  background-color: var(--um-blue);
+  color: var(--um-maize);
+  text-align: center;
+  padding: 1rem;
+  font-size: 0.9rem;
+}
+
+.page-footer a{
+  color: var(--hyperlink-color);
+  font-weight: 600;
+}
+
