@@ -7,21 +7,21 @@
 I wrote this css file after looking at the  page on stylestage: https://stylestage.dev/styles/fresh/#guidelines.
 ****************************************************************************/
 
-:root{
-  --um-blue: #00274C;     
-  --um-maize: #FFCB05;    
-  --text: #121212;              
+:root {
+  --um-blue: #00274C;
+  --um-maize: #FFCB05;
+  --text: #121212;
   --color-background: #f9f9f9;
   --color-text: black;
   --hyperlink-color: #CFC096;
-  --ross-orange: #D86018; 
-  --font-family: "Montserrat";
+  --ross-orange: #D86018;
+  --font-family: "IBM Plex Sans", Roboto, sans-serif;
   --font-weight-strong: 500;
   --font-size-h1: 2.5rem;
   --font-size-h2: 2rem;
   --font-size-h3: 1.75rem;
   --font-size-h4: 1.35rem;
-  --font-size-text: 1.15rem;
+  --font-size-text: 1.5rem;
   --border-radius: 1rem;
   /* # Stephanie Eckles suggested these two variables for the header logo */
   --logomark-height: 3em;
@@ -41,60 +41,59 @@ I wrote this css file after looking at the  page on stylestage: https://stylesta
 
 .skip-to-main:focus,
 .skip-to-main:focus-visible {
-  left:1rem;
-  top:1rem;
+  left: 1rem;
+  top: 1rem;
 }
 
+.title {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 12px;
+  padding: 16px 20px;
+}
 
-header{
-  display: grid;
-  grid-template-columns: auto 1fr;       
-  background:var(--um-blue); 
+header {
+  background: var(--um-blue);
   color: var(--um-maize);
 }
 
 header h1 {
-  display: inline-grid;
-  min-height: var(--logomark-height);
-  place-content: center;
-  grid-column: 2;        
-  grid-row: 1;           
   margin: 0;
+  line-height: 1.1;
 }
 
-header img{
-  height: clamp(2.2rem, 6vw, 3.2rem);          
-  display:block;
+header img {
+  height: 10rem;
+  display: block;
 }
 
-nav{ 
-  grid-area:nav; 
-  grid-column: 1 / -1;  
-  grid-row: 2;      
-}
-
-nav ul{
-  margin: 0;
-  padding: 0.5rem; 
+nav ul {
   display: grid;
-  grid-template-columns: 1fr 1fr;               
-  gap: clamp(0.4rem, 1vw, 0.8rem);
-  justify-content: center;
-  list-style:none;
+  grid-template-columns: 1fr 1fr;
+  align-items: center;
+  margin: 0;
+  padding: 0.5rem;
+  gap: 0.4rem;
+  list-style: none;
 }
 
-nav ul a{
-  display:block;
-  text-align:center;
+nav ul a {
+  display: block;
+  text-align: center;
   padding: 0.5rem;
-  background:rgba(11, 82, 129, 0.14);
-  color:white;
+  color: white;
   font-size: 1.25rem;
   border-radius: var(--border-radius);
 }
 
 nav ul li {
   margin: 0.25rem;
+}
+
+.currentpage {
+  border: 1px solid white;
+  border-radius: var(--border-radius);
 }
 
 body {
@@ -106,37 +105,22 @@ body {
 }
 
 ul {
-    display: block;
-    list-style-type: disc;
-    margin-block-start: 1em;
-    margin-block-end: 1em;
-    padding-inline-start: 40px;
-    unicode-bidi: isolate;
+  display: block;
+  margin: 1rem;
 }
 
-/* # Stephanie Eckles suggested using flexbox for article sections */
 article section {
   display: flex;
   flex-direction: column;
-  align-items: flex-start;
   padding-top: 1vh;
   padding-bottom: 5vh;
 }
 
-article .container,
-.page-footer .container,
-#styles .container {
-  width: 100%;
-  max-width: 80ch;
-  margin-right: auto;
-  margin-left: auto;
+article {
+  padding-left: 1rem;
+  padding-right: 1rem;
+  padding-top: 2rem;
 }
-
-article,
-#styles {
-  padding: 1rem;
-}
-/* # Stephanie Eckles suggested using flexbox for article sections ends */
 
 /* # Stephanie Eckles suggested these heading styles but I also made changes myself to suit my website design */
 h1,
@@ -158,11 +142,7 @@ h1 {
 h2 {
   font-size: var(--font-size-h2);
   text-align: center;
-}
-
-#main h2 {
   background-color: var(--um-maize);
-  align-self: center;
   color: var(--um-blue);
   padding: 0.25em 0.5em;
 }
@@ -178,74 +158,109 @@ h4 {
 
 p {
   font-size: var(--font-size-text);
-  margin-bottom: 1.25em;
+  margin-bottom: 1em;
 }
 
 img {
-  max-inline-size: 100%;  
-  block-size: auto;        
-  height: auto;            
-  display: block;          
+  max-inline-size: 100%;
+  block-size: auto;
+  height: auto;
+  display: block;
 }
 
-iframe{
-  max-inline-size: 100%;  
-  aspect-ratio:16/9;
-  block-size: auto;        
-  height: auto;            
-  display: block;          
+iframe {
+  max-inline-size: 100%;
+  aspect-ratio: 16/9;
+  block-size: auto;
+  height: auto;
+  display: block;
 }
 
-/* # Stephanie Eckles suggested these list styles */
 ol {
-    display: block;
-    list-style-type: decimal;
-    margin-block-start: 1em;
-    margin-block-end: 1em;
-    padding-inline-start: 40px;
-    unicode-bidi: isolate;
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 2rem;
+  justify-content: center;
+  text-align: center;
+  list-style-position: inside; 
 }
-/* # Stephanie Eckles suggested these list styles ends*/
 
-.options{
-  display:grid;
-  grid-template-columns: auto auto;
-  padding:0.5em;
+ol li{
+    border: #00274C solid 1px;
+    flex: 1 1 calc(50% - 1rem); 
+    padding: 0.5rem;
+    min-width: none;
+    overflow-wrap: anywhere; 
 }
-.options a{
+
+
+.options {
+  display: grid;
+  grid-template-columns: auto auto;
+  padding: 0.5em;
+}
+
+.options a {
   place-items: center;
   border: var(--ross-orange) 2px solid;
   margin: 0.5em;
   padding: 0.5em;
   justify-content: center;
-  text-align:center;
+  text-align: center;
   font-size: 1.25rem
 }
-.options li{
+
+.options li {
   display: contents;
 }
 
-.resource-section{
-  background:white; 
+.resource-section {
+  background: white;
   padding: 1rem;
   margin: 1rem 0;
 }
 
-.resource-grid{
-  display:grid;
-  grid-template-columns:repeat(2,1fr);
-  gap:1rem;
+.resource-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1rem;
   list-style: none;
   padding: 0;
 }
 
-.resource-card{
-  border:1px solid;
+.resource-card {
+  border: 1px solid;
   padding: 1rem;
   margin-bottom: 1rem;
 }
 
-.page-footer{
+.popular {
+  list-style: none;
+  display: grid;
+  grid-template-columns: repeat(6, minmax(0, 1fr));
+  gap: 1rem;
+}
+
+.span-2 {
+  grid-column: span 2;
+}
+
+.span-3 {
+  grid-column: span 3;
+}
+
+.popular-card {
+  padding: 16px;
+  border-radius: 10px;
+  background: #f2f4f7;
+  text-align: center;
+  border: 1px solid black;
+  height: 3rem;
+  display: grid;
+  place-items: center;
+}
+
+.page-footer {
   background-color: var(--um-blue);
   color: var(--um-maize);
   text-align: center;
@@ -253,8 +268,85 @@ ol {
   font-size: 0.9rem;
 }
 
-.page-footer a{
+.page-footer a {
   color: var(--hyperlink-color);
   font-weight: 600;
 }
 
+.box{
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  justify-content: center;
+  gap: 1rem;
+}
+
+.box li{
+  border:#00274C solid 1px;
+  padding:1rem;
+}
+
+@media (min-width: 768px) {
+  nav ul {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 10px;
+    padding: 12px 16px;
+  }
+
+  nav a {
+    background: transparent;
+  }
+
+  article {
+    padding-left: 3rem;
+    padding-right: 3rem;
+    padding-top: 2rem;
+  }
+
+ol {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  column-gap: 2rem;
+  justify-content: center;
+  text-align: center;
+  max-width: 100%;
+}
+
+  p {
+    line-height: 1.7;
+  }
+
+  .popular {
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    grid-auto-rows: minmax(4.5rem, auto);
+  }
+
+  .span-2 {
+    grid-column: span 2;
+  }
+
+  .span-3 {
+    grid-column: span 2;
+  }
+
+  .popular-card {
+    min-height: 4.5rem;
+  }
+
+  .start-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: start;
+    gap: 1.25rem;
+  }
+
+  .options {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: .75rem;
+  }
+
+  .options a {
+    padding: .8rem;
+  }
+}
