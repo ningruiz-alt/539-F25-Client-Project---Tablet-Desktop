@@ -11,7 +11,7 @@
 
 <body>
     <header>
-        <div class="container">
+        <div class="title">
             <a class="skip-to-main" href="">Skip to main content</a>
             <img src="images/UMSI_signature_vertical_informal_solidblue.jpg" alt="UMSI Logo">
             <h1>Prepare for Your Interview</h1>
@@ -54,8 +54,7 @@
                     </p>
 
                     <p>
-                        Need feedback? You can always <a
-                            href="https://careercenter.umich.edu/contact/makeappointment"
+                        Need feedback? You can always <a href="https://careercenter.umich.edu/contact/makeappointment"
                             target="_blank">meet with a CDO Career Coach</a> to review your materials.
                     </p>
                 </section>
@@ -192,13 +191,17 @@
         <p>University of Michigan School of Information | <a href="https://umich.instructure.com/courses/137916">UMSI
                 Career
                 Development Office </a></p>
-    <p>© Copyrights <span id="year"></span> by Ningrui Zhu. All rights reserved.</p>
-  </footer>
+        <p> If you want to connect with CDO, leave your email and staff will connect you</p>
+        <label for="cdoEmail"> Email: </label>
+        <input type="cdoEmail" placeholder="you@umich.edu">
+        <button id="cdoButton">Submit</button>
+        <p>© Copyrights <span id="year"></span> by Ningrui Zhu. All rights reserved.</p>
+    </footer>
 
-  <script>
-    document.getElementById("year").innerHTML = new Date().getFullYear();
+    <script>
+        document.getElementById("year").innerHTML = new Date().getFullYear();
 
-  </script>
+    </script>
 </body>
 
 </html>
