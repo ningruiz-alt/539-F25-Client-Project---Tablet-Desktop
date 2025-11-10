@@ -12,7 +12,7 @@
 <body>
 
   <header>
-    <div class="container">
+    <div class="title">
       <a class="skip-to-main" href="">Skip to main content</a>
       <img src="images/UMSI_signature_vertical_informal_solidblue.jpg" alt="UMSI Logo">
       <h1>Welcome to the UMSI Career Development Resource Hub</h1>
@@ -20,14 +20,14 @@
 
     <nav>
       <ul>
-        <li><a href="index.html">Home</a></li>
+        <li class="currentpage"><a href="index.html">Home</a></li>
         <li><a href="resume.html">Resumes</a></li>
         <li><a href="networking.html">Networking & Connections</a></li>
         <li><a href="interviews.html">Interviews</a></li>
       </ul>
     </nav>
   </header>
-  
+
   <main id="main" tabindex="-1">
     <div class="container">
       <article id="about">
@@ -91,15 +91,20 @@
         </div>
 
         <h3>Most Popular Resources</h3>
-        <ul>
-          <li><a href="https://umsi.instructure.com/courses/12345/pages/resume-guide" target="_blank">UMSI Resume
+        <ul class="popular">
+          <li class="popular-card span-2"><a href="https://umsi.instructure.com/courses/12345/pages/resume-guide"
+              target="_blank">UMSI Resume
               Guide</a></li>
-          <li><a href="https://umsi.campusgroups.com/cdo/home/" target="_blank">Attend a Career Event</a></li>
-          <li><a href="https://umsi.instructure.com/courses/12345/pages/networking-tips" target="_blank">Networking
+          <li class="popular-card span-2"><a href="https://umsi.campusgroups.com/cdo/home/" target="_blank">Attend a
+              Career Event</a></li>
+          <li class="popular-card span-2"><a href="https://umsi.instructure.com/courses/12345/pages/networking-tips"
+              target="_blank">Networking
               Tips</a></li>
-          <li><a href="https://umsi.instructure.com/courses/12345/pages/interview-prep" target="_blank">Interview
+          <li class="popular-card span-3"><a href="https://umsi.instructure.com/courses/12345/pages/interview-prep"
+              target="_blank">Interview
               Preparation</a></li>
-          <li><a href="https://careerlink.umich.edu" target="_blank">Career Link: UMSI’s Exclusive Career Portal</a>
+          <li class="popular-card span-3"><a href="https://careerlink.umich.edu" target="_blank">Career Link: UMSI’s
+              Exclusive Career Portal</a>
           </li>
         </ul>
 
@@ -124,7 +129,13 @@
   <footer class="page-footer">
     <p>University of Michigan School of Information | <a href="https://umich.instructure.com/courses/137916">UMSI Career
         Development Office </a></p>
+    <p>© Copyrights <span id="year"></span> by Ningrui Zhu. All rights reserved.</p>
   </footer>
+
+  <script>
+    document.getElementById("year").innerHTML = new Date().getFullYear();
+
+  </script>
 </body>
 
 </html>

@@ -22,7 +22,7 @@
                 <li><a href="index.html">Home</a></li>
                 <li><a href="resume.html">Resumes</a></li>
                 <li><a href="networking.html">Networking & Connections</a></li>
-                <li><a href="interviews.html">Interviews</a></li>
+                <li class="currentpage"><a href="interviews.html">Interviews</a></li>
             </ul>
         </nav>
     </header>
@@ -192,8 +192,13 @@
         <p>University of Michigan School of Information | <a href="https://umich.instructure.com/courses/137916">UMSI
                 Career
                 Development Office </a></p>
-    </footer>
+    <p>© Copyrights <span id="year"></span> by Ningrui Zhu. All rights reserved.</p>
+  </footer>
 
+  <script>
+    document.getElementById("year").innerHTML = new Date().getFullYear();
+
+  </script>
 </body>
 
 </html>
