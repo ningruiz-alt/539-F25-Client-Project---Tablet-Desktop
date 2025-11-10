@@ -57,60 +57,62 @@
         <section>
           <h2>Why Use This Resource?</h2>
           <ol>
-            <li><strong>Everything in One Place:</strong> Stop searching endlessly—quickly access the resources you need
+            <li><h3>Everything in One Place:</h3> <p>Stop searching endlessly—quickly access the resources you need
               for
-              resumes, interviews, networking, mentorship, and more.</li>
-            <li><strong>Student-Focused Navigation:</strong> Browse by topic or question. Key areas are highlighted so
+              resumes, interviews, networking, mentorship, and more.</p></li>
+            <li><h3>Student-Focused Navigation:</h3><p>Browse by topic or question. Key areas are highlighted so
               you
-              can get moving right away.</li>
-            <li><strong>Guidance Backed by Experts:</strong> All resources are recommended and reviewed by the UMSI
+              can get moving right away.</p></li>
+            <li><h3>Guidance Backed by Experts:</h3> <p>All resources are recommended and reviewed by the UMSI
               Career
-              Development Office, so you can trust the advice and materials you find here.</li>
-            <li><strong>Always Accessible:</strong> Visit the site anytime, from any device. We’re committed to meeting
+              Development Office, so you can trust the advice and materials you find here.</p></li>
+            <li><h3>Always Accessible:</h3> <p>Visit the site anytime, from any device. We’re committed to meeting
               the
-              accessibility needs of all students.</li>
-            <li><strong>Modern Support, UMSI Excellence:</strong> We benchmark against top peer institutions and
+              accessibility needs of all students.</p></li>
+            <li><h3>Modern Support, UMSI Excellence:</h3> <p>We benchmark against top peer institutions and
               integrate
-              UMSI’s unique support, showcasing our commitment to your success.</li>
+              UMSI’s unique support, showcasing our commitment to your success.</p></li>
           </ol>
         </section>
       </article>
 
-      <section>
-        <h2>Start Here</h2>
-        <div>
-          <img src="images/UMSI_CampusFall_UMSIBackpack_02.jpg"
-            alt="A student wears a UMSI backpack in fall on the drag.">
-          <ul class="options">
-            <li><a href="resume.html">Resumes</a></li>
-            <li><a href="networking&connections.html">Networking & Connections</a></li>
-            <li><a
-                href="https://docs.google.com/spreadsheets/d/1fT4YeP1M5moXtFYniTkyb-CCLV7PZ75B9iJFH-XWMv4/edit?gid=1589706144#gid=1589706144">Career
-                Exploration excel</a></li>
-            <li><a href="https://careercenter.umich.edu/contact/makeappointment">
-                Talk to your career coach</a></li>
+      <article>
+        <section>
+          <h2>Start Here</h2>
+          <div>
+            <img src="images/UMSI_CampusFall_UMSIBackpack_02.jpg"
+              alt="A student wears a UMSI backpack in fall on the drag.">
+            <ul class="options">
+              <li><a href="resume.html">Resumes</a></li>
+              <li><a href="networking&connections.html">Networking & Connections</a></li>
+              <li><a
+                  href="https://docs.google.com/spreadsheets/d/1fT4YeP1M5moXtFYniTkyb-CCLV7PZ75B9iJFH-XWMv4/edit?gid=1589706144#gid=1589706144">Career
+                  Exploration excel</a></li>
+              <li><a href="https://careercenter.umich.edu/contact/makeappointment">
+                  Talk to your career coach</a></li>
+            </ul>
+          </div>
+
+          <h3>Most Popular Resources</h3>
+          <ul class="popular">
+            <li class="popular-card span-2"><a href="https://umsi.instructure.com/courses/12345/pages/resume-guide"
+                target="_blank">UMSI Resume
+                Guide</a></li>
+            <li class="popular-card span-2"><a href="https://umsi.campusgroups.com/cdo/home/" target="_blank">Attend a
+                Career Event</a></li>
+            <li class="popular-card span-2"><a href="https://umsi.instructure.com/courses/12345/pages/networking-tips"
+                target="_blank">Networking
+                Tips</a></li>
+            <li class="popular-card span-3"><a href="https://umsi.instructure.com/courses/12345/pages/interview-prep"
+                target="_blank">Interview
+                Preparation</a></li>
+            <li class="popular-card span-3"><a href="https://careerlink.umich.edu" target="_blank">Career Link: UMSI’s
+                Exclusive Career Portal</a>
+            </li>
           </ul>
-        </div>
 
-        <h3>Most Popular Resources</h3>
-        <ul class="popular">
-          <li class="popular-card span-2"><a href="https://umsi.instructure.com/courses/12345/pages/resume-guide"
-              target="_blank">UMSI Resume
-              Guide</a></li>
-          <li class="popular-card span-2"><a href="https://umsi.campusgroups.com/cdo/home/" target="_blank">Attend a
-              Career Event</a></li>
-          <li class="popular-card span-2"><a href="https://umsi.instructure.com/courses/12345/pages/networking-tips"
-              target="_blank">Networking
-              Tips</a></li>
-          <li class="popular-card span-3"><a href="https://umsi.instructure.com/courses/12345/pages/interview-prep"
-              target="_blank">Interview
-              Preparation</a></li>
-          <li class="popular-card span-3"><a href="https://careerlink.umich.edu" target="_blank">Career Link: UMSI’s
-              Exclusive Career Portal</a>
-          </li>
-        </ul>
-
-      </section>
+        </section>
+      </article>
       <article>
         <section class="container">
           <h2>Connect with the UMSI Career Development Office</h2>
@@ -132,15 +134,13 @@
     <p>University of Michigan School of Information | <a href="https://umich.instructure.com/courses/137916">UMSI Career
         Development Office </a></p>
     <p> If you want to connect with CDO, leave your email and staff will connect you</p>
-    <label for="cdoEmail"> Email: </label>
-    <input type="cdoEmail" placeholder="you@umich.edu">
+    <label> Email: <input type="email" id="cdoEmail" placeholder="you@umich.edu"></label>
     <button id="cdoButton">Submit</button>
     <p>© Copyrights <span id="year"></span> by Ningrui Zhu. All rights reserved.</p>
   </footer>
 
   <script>
     document.getElementById("year").innerHTML = new Date().getFullYear();
-
   </script>
 </body>
 
